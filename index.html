@@ -4,12 +4,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    </link>
+    <title>Bread Gateway</title>
+    <link rel="stylesheet" href="style.css">
+    </link>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/ms-Dropdown-master/js/msdropdown/jquery.dd.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="/ms-Dropdown-master/css/msdropdown/dd.css" />
 </head>
 
 <body>
-    <img src="breadGateway.png"></img>
-    <h1>this is a test</h1>
+    <h1>Tʜᴇ Bʀᴇᴀᴅ Gᴀᴛᴇᴡᴀʏ</h1>
+
+    <img src="breadGateway.png" class="breadImg" alt="The Bread Gateway"></img>
+
+    <h2>What is the Secret Code?</h2>
+
+    <h3>Add the next bread</h3>
+
+    <select name="BreadSelect" id="BreadSelect">
+        <option value="White" data-image="Breads/white.png">White</option>
+        <option value="Baguette" data-image="Breads/baguette.png">Baguette</option>
+        <option value="Pizza" data-image="Breads/pizza.png">Pizza</option>
+        <option value="Bun" data-image="Breads/bun.png">Bun</option>
+        <option value="Sandwich" data-image="Breads/sandwich.png">Sandwich</option>
+        <option value="Burger" data-image="Breads/burger.png">Burger</option>
+        <option value="Sourdough" data-image="Breads/sourdough.png">Sourdough</option>
+        <option value="Cake" data-image="Breads/cake.png">Cake</option>
+        <option value="Bagel" data-image="Breads/bagel.png">Bagel</option>
+        <option value="Wholemeal" data-image="Breads/wholemeal.png">Wholemeal</option>
+        <option value="Brioche" data-image="Breads/brioche.png">Brioche</option>
+        <option value="Purple" data-image="Breads/purple.png">Purple</option>
+        <option value="Ultra" data-image="Breads/ultra.png">Ultra</option>
+        <option value="Fairy" data-image="Breads/fairy.png">Fairy</option>
+    </select>
+
+    <button onclick="AddBread()" id="AddBread">Add</button>
+
+    <h3>Breads Selected</h3>
+
+    <ol id="SelectedBreads">
+
+    </ol>
+
+    <button id="RemoveBread" onclick="RemoveBread()">Remove</button>
+
+    <br>
+
+
+    <noscript>ENABLE JAVASCRIPT PLEASE</noscript>
+    <script src="script.js"></script>
+
+    <script language="javascript">
+        $(document).ready(function(e) {
+            try {
+                //initiate dropdown
+                $("body select").msDropdown({
+                    visibleRows: 30
+                });
+
+                //show breads already selected
+                UpdateCards();
+            } catch (e) {
+                alert(e.message);
+            }
+        });
+    </script>
 </body>
 
 </html>

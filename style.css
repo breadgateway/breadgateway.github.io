@@ -1,0 +1,111 @@
+body {
+    background-color: white;
+    color: black;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+pre {
+    overflow-wrap: break-word;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.4em;
+}
+
+h3 {
+    font-size: 1.1em;
+}
+
+p {
+    font-size: 1em;
+}
+
+
+/* img {
+    width: 75%;
+    height: auto;
+} */
+
+.breadImg {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+}
+
+img {
+    width: 50px;
+    height: auto;
+}
+
+option {
+    width: 120px;
+    height: 60px;
+    text-align: right;
+}
+
+
+/* button group of breads */
+
+.btn-group button {
+    background-color: lightgray;
+    /* Green background */
+    /* border: 1px solid grey; */
+    /* Green border */
+    color: black;
+    /* black text */
+    padding: 10px;
+    /* vertical-align: middle; */
+    /* Some padding */
+    cursor: pointer;
+    /* Pointer/hand icon */
+}
+
+.btn-group button:not(:last-child) {
+    border-right: none;
+    /* Prevent double borders */
+}
+
+
+/* Clear floats (clearfix hack) */
+
+.btn-group:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.btn-group-icon {
+    width: 25px;
+    height: 25px;
+}
+
+.btn-group-label {
+    line-height: 0px;
+}
+
+#AddBread {
+    width: 90px;
+    height: 45px;
+    border-radius: 10px;
+}
+
+#RemoveBread {
+    width: 90px;
+    height: 45px;
+    border-radius: 10px;
+}
+
+#AddBread:hover {
+    background-color: limegreen;
+    border-radius: 15px;
+}
+
+#RemoveBread:hover {
+    background-color: red;
+    border-radius: 15px;
+}
